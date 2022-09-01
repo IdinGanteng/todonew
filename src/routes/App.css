@@ -1,0 +1,214 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-image: url(../components/buku.jpg);
+  background-size:cover;
+  
+  
+}
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 45%;
+  min-height: 600px;
+  background-image: url(../components/index.jpeg);
+  background-size: cover;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  
+}
+
+.important-btn {
+  margin-right: 5px;
+  width: 20px;
+  border-width: 1px;
+  border-radius: 49%;
+  padding: 1px;
+  border-color: white;
+  color: white;
+  background: transparent;
+}
+
+h1 {
+  margin: 32px 0;
+  font-size: 5vw;
+  font-family:cursive;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px;
+  border: 2px solid rgb(247, 114, 136);
+  outline: none;
+  width: 320px;
+  max-height: 100%;
+  color: rgb(253, 67, 98);
+}
+
+.todo-button {
+  font-family:cursive;
+  font-size: large;
+  padding: 15px 10px ;
+  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline:none;
+  background: linear-gradient(
+    90deg,
+    pink 0%,
+    rgb(238, 64, 93) 100%
+  );
+  color:red;
+  text-transform: capitalize;
+  transition-duration: 1s;
+}
+.todo-button:hover{
+  background: linear-gradient(
+    90deg,
+    pink 0%,
+    rgb(253, 127, 148) 100%
+  );
+}
+.todo-button{
+  background: transparent;
+  border: 2px solid rgb(248, 114, 136);
+}
+
+.todo-container {
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: white;
+  background: pink;
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.seperator {
+  height: 1px;
+  width: 80%;
+  align-self: center;
+  background-color: rgb(215, 228, 243);
+}
+.form-box{
+  min-width: 100%;
+  height: 100vh;
+  border: dotted red 5vw;
+  /* border: 1px solid red; */
+  margin: 0vw;
+  padding: 5vw ;
+  position:relative; 
+  /* position:relative for .prevBtn and .nextBtn position:absolute; */
+}
+.form-box h5{
+  font-size: 35px ;
+  text-align: center;
+  color: red;
+  margin: 0 0 .5vh 0;
+}
+.form-box label{
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 0 2vh 0;
+}
+.form-box input, textarea{
+  display: flex;
+  width: 100%;
+  padding: .5rem .8rem .5rem .8rem;
+  margin: .9vw 0 ;
+  border:0;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form-box textarea{
+  height: 15vh;
+}
+.prevBtn, .nextBtn{
+  display: flex;
+  width: 30%;
+  height: 2rem;
+  color: red;
+  border: 0;
+  bottom: 0;
+  cursor: pointer;
+  font-size: 20px;
+  position:absolute;
+
+}
+
+/* LOGIN */
+
+.tulisan_login{
+	text-align: center;
+	/*membuat semua huruf menjadi kapital*/
+	text-transform: uppercase;
+}
+ 
+.kotak_login{
+	width: 350px;
+	background: white;
+	/*meletakkan form ke tengah*/
+	margin: 80px auto;
+	padding: 30px 20px;
+}
+ 
+label{
+	font-size: 11pt;
+}
+ 
+.form_login{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+ 
+.tombol_login{
+	background: #46de4b;
+	color: white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+
+
