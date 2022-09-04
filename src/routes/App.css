@@ -185,6 +185,7 @@ h1 {
 	/*meletakkan form ke tengah*/
 	margin: 80px auto;
 	padding: 30px 20px;
+  border-radius: 10px;
 }
  
 label{
@@ -198,6 +199,7 @@ label{
 	padding: 10px;
 	font-size: 11pt;
 	margin-bottom: 20px;
+  border-radius: 3px;
 }
  
 .tombol_login{
@@ -210,5 +212,93 @@ label{
 	padding: 10px 20px;
 }
 
+
+/* navbar */
+
+
+nav{
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+}
+ul {
+  list-style-type:none;
+  top: 0;
+  padding:0px;
+  overflow: hidden;
+  background-color: pink;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover,.dropdown:hover, .dropbtn {
+  background-color: rgb(252, 133, 152);
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+.logo{
+  width:8cm;
+  height: 8cm;
+  padding: 5px;
+  align-items: center;
+  margin-left: 30px;
+ 
+  
+}
 
 

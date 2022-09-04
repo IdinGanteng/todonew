@@ -1,12 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import logo from '../components/index.png'
 
 const Login = () => {
   const navigate = useNavigate()
   return (
     <>
     <div className='kotak_login'>
+      <div className='logo'>
+      <img src={logo} alt="logo"/>
+      </div>
       <h3 className='tulisan_login'>Silahkan Login Dulu</h3>
       <br/>
       <br/>
