@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
+
 // Theme React Bootstrap
 
 
@@ -17,6 +18,7 @@ root.render(
     <Footer/>
     <Navbar/>
     <App />
+    {/* <Login/> */}
   </React.StrictMode>
 );
 

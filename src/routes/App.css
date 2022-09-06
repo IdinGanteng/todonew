@@ -180,7 +180,7 @@ h1 {
 }
  
 .kotak_login{
-	width: 350px;
+	width: 500px;
 	background: white;
 	/*meletakkan form ke tengah*/
 	margin: 80px auto;
@@ -292,13 +292,50 @@ li a:hover,.dropdown:hover, .dropbtn {
   display: block;
 } 
 .logo{
-  width:8cm;
-  height: 8cm;
-  padding: 5px;
-  align-items: center;
-  margin-left: 30px;
- 
+  margin-left: -3%;
+  
   
 }
+.home-logo{
+ 
+  width: 8cm;
+  height: auto;
+  margin: 30%;
+  margin-top: 10%;
+}
+.text-home{
+  font-family: 'Courier New', Courier, monospace;
+  color:rgb(247, 216, 221);
+  margin: -30%;
+  margin-top:40%;
+  text-align: center;
+}
+.a{
+  text-align: center;
+  margin-left: 50%;
+}
+.b{
+  text-align: center;
+  margin-left: 50%;
+}
+.kotak-bio{
+  width: 1000px;
+	background: white;
+	/*meletakkan form ke tengah*/
+	margin: 80px auto;
+	padding: 30px 20px;
+  border-radius: 10px;
+}
+.saya{
+  margin-left: 85mm;
+}
+.judul-bio{
+  text-align: center;
+}
+.isi-bio{
+  text-align: center;
+}
+
+
 
 

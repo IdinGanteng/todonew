@@ -16,14 +16,14 @@ return (
 		<Row>
 		<Column>
 			<Heading>About Us</Heading>
-			<FooterLink href="#">Aim</FooterLink>
+			<FooterLink href="/Biodata_penulis">Penulis</FooterLink>
 			<FooterLink href="#">Vision</FooterLink>
 			
 		</Column>
 		<Column>
 			<Heading>Services</Heading>
 			
-			<FooterLink href="#">Coding</FooterLink>
+			<FooterLink href="https://github.com/IdinGanteng">Git Hub</FooterLink>
 			<FooterLink href="#">Teaching</FooterLink>
 		</Column>
 		<Column>
@@ -34,14 +34,14 @@ return (
 		</Column>
 		<Column>
 			<Heading>Social Media</Heading>
-			<FooterLink href="#">
+			<FooterLink href="https://www.facebook.com/riski.akbar.58511276/">
 			<i className="fab fa-facebook-f">
 				<span style={{ marginLeft: "10px" }}>
 				Facebook
 				</span>
 			</i>
 			</FooterLink>
-			<FooterLink href="#">
+			<FooterLink href="https://www.instagram.com/donquixote_doff/">
 			<i className="fab fa-instagram">
 				<span style={{ marginLeft: "10px" }}>
 				Instagram

@@ -8,12 +8,12 @@ const Navbar = () => {
                 <li><a href='/login'>login</a></li>
                 <li><a href='/registrasi'>Registrasi</a></li>
                 <li><a href='/'>home</a></li>
-                <div class="dropdown">
-                <button class="dropbtn">Golek Liyone
-                <i class="fa fa-caret-down"></i>
+                <div className="dropdown">
+                <button className="dropbtn">Golek Liyone
+                <i className="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
-                    <a href="/">about</a>
+                <div className="dropdown-content">
+                    <a href="/biodata_penulis">about</a>
                     <a href="/">contact</a>
                     <a href="/login">log out</a>
                 </div>
