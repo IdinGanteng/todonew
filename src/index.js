@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import Todo from './components/todo';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
@@ -18,7 +17,6 @@ root.render(
     <Footer/>
     <Navbar/>
     <App />
-    {/* <Login/> */}
   </React.StrictMode>
 );
 

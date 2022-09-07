@@ -1,33 +1,49 @@
 import React from 'react'
-// import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import {useState} from 'react';
 import axios from 'axios';
+// import Login from './Login';
 
 function Registrasi(){
     
-  const [userName,setUserName] = useState('');
-  const [userEmail,setUserEmail] = useState('');
-  const [password1, setPassword1] = useState('');
-  const [password2, setPassword2] = useState('');
-  // const [navigate,setNavgate] = useState(false);
-  // console.log(firstName,lastName,email,password);
-  function submit(e){
-    e.preventDeafult();
+  const [userName,setUserName] = useState({});
+  const [userEmail,setUserEmail] = useState({});
+  const [userPhoneNumber,setUserPhoneNumber] = useState({});
+  const [userPassword1, setUserPassword1] = useState({});
+  const [userPassword2, setUserPassword2] = useState({});
+  const [userFirstName] = useState('');
+  const [userLastName] = useState ('')
+  const [navigate,setNavigate] = useState(false);
+ 
+  const submit= async event =>{
+    event.preventDefault();
 
-
-      console.log(userName)
-
-
-
-      // await axios.post('http://192.168.1.34:8082/users/regist', payload);
-      // setNavgate(true)
+  
+    // const payload={
+    //   userName:userName,
+    //   userEmail:userEmail,
+    //   userPhoneNumber:userPhoneNumber,
+    //   userPassword1:userPassword1,
+    //   userPassword2:userPassword2,
+    // }
+    // console.log(payload);
+    
+    
+    
+    
+    
+     await axios.post('http://192.168.1.15:8082/users/register', {
+      userName,userEmail,userPhoneNumber,userPassword1,userPassword2,userFirstName,userLastName
+  } 
+    );
+      setNavigate(true);
     }
     
     
-    // if (navigate) {
-    //   return <Navigate to="/login"/>
+    if (navigate) {
+      return <Navigate to={'/login'}/>
      
-    // }
+    }
     return (
       <>
     
@@ -38,19 +54,11 @@ function Registrasi(){
         <h3 className='tulisan_login'>Registrasi</h3>
         <br/>
         <br/>
-        {/* <label>First Name</label>
-        <input 
-          className='form_login' 
-          type={'text'}
-          placeholder="username"
-          onChange={(e) => setFirstName(e.target.value)}
-          /> */}
         <label>User Name</label>
         <input 
           className='form_login'
           type={'text'} 
           placeholder="username"
-          value={userName}
           onChange={(e) => setUserName(e.target.value)}
           />
         <label>Email</label>
@@ -60,21 +68,28 @@ function Registrasi(){
           placeholder="email address"
           onChange={(e) => setUserEmail(e.target.value)}
           />
+        <label>No.Telepon</label>
+        <input
+          className='form_login' 
+          type={'text'} 
+          placeholder="phone number"
+          onChange={(e) => setUserPhoneNumber(e.target.value)}
+          />
        <label>Password</label>
         <input 
           className='form_login'
           type={'password'} 
           placeholder="password"
-          onChange={(e) => setPassword1(e.target.value)}
+          onChange={(e) => setUserPassword1(e.target.value)}
           />
        <label>Ulangi Password</label>
         <input 
           className='form_login'
           type={'password'} 
           placeholder="password"
-          onChange={(e) => setPassword2(e.target.value)}
+          onChange={(e) => setUserPassword2(e.target.value)}
           />
-       <button className='tombol_login' type='submit'>Register</button>
+       <input className='tombol_login' type='submit'/>
      </form>
      
       
@@ -83,4 +98,4 @@ function Registrasi(){
   )
 }
 
-export default Registrasi
+export default Registrasi;

@@ -11,7 +11,7 @@ const Login =()=>{
 
  const [payload, setPayload] = useState({});
   
-  const handleChange = async (event) => {
+  const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setPayload(values =>({...values, [name]: value}))
@@ -19,8 +19,9 @@ const Login =()=>{
   }
   
   const handleSubmit = (event) =>{
-  event.preventDeafult();
+  event.preventDefault()
   console.log(payload)
+  
   }
   
   
