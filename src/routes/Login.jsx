@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-
+import { Navigate } from 'react-router-dom';
 import logo from '../components/idin.png';
-
+import axios from 'axios';
 
 
 
@@ -9,26 +9,31 @@ import logo from '../components/idin.png';
 
 const Login =()=>{
 
- const [payload, setPayload] = useState({});
+  const [userName,setUserName] = useState({});
+  const [userPassword,setUserPassword] = useState({});
   
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setPayload(values =>({...values, [name]: value}))
+  const [navigate,setNavigate] = useState(false);
+ 
+  const submit= async event =>{
+    event.preventDefault();
 
-  }
-  
-  const handleSubmit = (event) =>{
-  event.preventDefault()
-  console.log(payload)
-  
-  }
-  
-  
-  // if (navigate) {
-  //   return <Navigate path="/login"/>
-   
+    
+    
+    const {data} = await axios.post('users/login', {
+      userName,userPassword
+    }
+    );
+    // console.log(respons.data);
 
+    axios.defaults.headers.common['Authorization']=`Bearer ${data['accesToken']}`
+      setNavigate(true);
+    }
+    
+    
+    if (navigate) {
+      return <Navigate to={'/toedoe'}/>
+    }
+    
   return (
     <>
    
@@ -40,16 +45,14 @@ const Login =()=>{
       <h3 className='tulisan_login'>Silahkan Login Dulu</h3>
       <br/>
       <br/>
-      <form  onSubmit={handleSubmit}>
+      <form  onSubmit={submit}>
 
          
        <label>User Name
         <input className='form_login'
                type='text'
                placeholder="user name"
-               name='userName'
-               value={payload.userName || ''}
-               onChange={handleChange}
+               onChange={(e) => setUserName(e.target.value)}
         />
 
        </label>
@@ -58,14 +61,13 @@ const Login =()=>{
         <input className='form_login'
                type={'password'}
                placeholder="password"
-               name='userPassword'
-               value={payload.userPassword || ''} 
-               onChange={handleChange}
+               onChange={(e) => setUserPassword(e.target.value)}
         />
        </label>
        <input className='tombol_login' type='submit'/>
        <br/>
        <br/>
+       <a href='/registrasi'>Belom punya akun?</a>
        {/* <button className='tombol_login' type='submit' onClick={() => navigate("/registrasi")}>Belum Punya Akun?</button> */}
       </form>
     </div>

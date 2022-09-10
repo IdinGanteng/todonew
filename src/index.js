@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+import '../src/components/axios'
 
 
 // Theme React Bootstrap
