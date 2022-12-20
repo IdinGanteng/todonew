@@ -18,7 +18,7 @@ function Registrasi() {
   const submit = async event => {
     event.preventDefault();
     
-    await axios.post('http://192.168.73.119:8082/users/register', {
+    await axios.post('http://192.168.1.3:8082/users/register', {
       userName, userEmail, userPhoneNumber, userPassword1, userPassword2, userFirstName, userLastName
     }
     );
@@ -27,7 +27,7 @@ function Registrasi() {
 
 
   if (navigate) {
-    return <Navigate to={'/login'} />
+    return <Navigate to='/login' />
 
   }
   return (
@@ -75,7 +75,7 @@ function Registrasi() {
             placeholder="password"
             onChange={(e) => setUserPassword2(e.target.value)}
           />
-          <button className='tombol_login' type='submit'>DAFTAR</button>
+          <button className='tombol_login' onClick={submit}>DAFTAR</button>
         </form>
 
 

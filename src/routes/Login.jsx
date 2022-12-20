@@ -8,7 +8,6 @@ import axios from 'axios';
 
 
 const Login =()=>{
-
   const [userName,setUserName] = useState({});
   const [userPassword,setUserPassword] = useState({});
   
@@ -19,11 +18,11 @@ const Login =()=>{
 
     
     
-    const {data} = await axios.post('users/login', {
+    const data = await axios.post('http://192.168.1.3:8082/users/login', {
       userName,userPassword
     }
     );
-    // console.log(respons.data);
+    // console.log(data);
 
     axios.defaults.headers.common['Authorization']=`Bearer ${data['accesToken']}`
       setNavigate(true);
@@ -31,7 +30,7 @@ const Login =()=>{
     
     
     if (navigate) {
-      return <Navigate to={'/toedoe'}/>
+      return <Navigate to="/toedoe"/>
     }
     
   return (
@@ -59,16 +58,15 @@ const Login =()=>{
        <label>Password
 
         <input className='form_login'
-               type={'password'}
+               type='password'
                placeholder="password"
                onChange={(e) => setUserPassword(e.target.value)}
         />
        </label>
-       <input className='tombol_login' type='submit'/>
+       <button className='tombol_login' type='submit'>DAFTAR</button>
        <br/>
        <br/>
        <a href='/registrasi'>Belom punya akun?</a>
-       {/* <button className='tombol_login' type='submit' onClick={() => navigate("/registrasi")}>Belum Punya Akun?</button> */}
       </form>
     </div>
     

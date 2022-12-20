@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-export default function TodoForm(props) {
+export default function TodoForm1(props) {
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
 
@@ -11,31 +11,28 @@ export default function TodoForm(props) {
     props.addTodo(input1)
     props.addTodo(input2)
     setInput1("")
-    
+    console.log(input1);
+    localStorage.setItem("succes:",JSON.stringify(input1));
   }
   
 
   return (
     <div>
-
-    <form onSubmit={handleSubmit} className="todo-form">
+    <form className="todo-form">
       <input
         value={input1}
         onChange={(e) => setInput1(e.target.value)}
         className="todo-input"
-        placeholder="Hari Ini Mau Ngapain?"
+        placeholder="Hari Ini  Ngapain?1"
       />
-      <button type="submit" className="todo-button">Add Todo</button>
-    </form>
-    <form onSubmit={handleSubmit} className="todo-form">
       <input
         value={input2}
         onChange={(e) => setInput2(e.target.value)}
         className="todo-input"
-        placeholder="Hari Ini  Ngapain?"
+        placeholder="Hari Ini  Ngapain?2"
       />
-      <button type="submit" className="todo-button">Add Todo</button>
     </form>
+      <button onClick={handleSubmit} className="todo-button">Add Todo</button>
     </div>
     
   );

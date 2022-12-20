@@ -203,7 +203,7 @@ label{
 }
  
 .tombol_login{
-	background: #46de4b;
+	background: #04AA6D;
 	color: white;
 	font-size: 11pt;
 	width: 100%;
@@ -211,7 +211,9 @@ label{
 	border-radius: 3px;
 	padding: 10px 20px;
 }
-
+.tombol_login:hover{
+  background: #46de4b ;
+}
 
 /* navbar */
 
